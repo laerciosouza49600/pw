@@ -1,0 +1,50 @@
+*{
+    margin: 30px 10% 15px 10%;
+}
+
+.power{
+    border-width: 20px;
+    border-color: white;
+    border-style: solid;
+    background-color: lightblue;
+}
+
+.primeiro{
+
+    border-width: 10px;
+    border-color: red;
+    border-style: solid;
+    background-color:grey;
+    padding: 20px;
+
+}
+
+.segundo{
+
+    border-width: 30px;
+    border-color: blue;
+    border-style: solid;
+    background-color: sandybrown;
+    padding: 20px;
+}
+
+.terceiro{
+
+    border-width: 10px;
+    border-color: violet;
+    border-style: solid;
+    background-color: yellow;
+    padding: 5px;
+}
+
+.quarto{
+
+    border-width: 5px;
+    border-color: lightseagreen;
+    border-style: solid;
+    background-color: lightskyblue;
+    padding: 3px;
+
+
+
+}

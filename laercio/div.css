@@ -1,0 +1,39 @@
+*{
+    margin: 1px 10% 1px 10%;
+}
+
+
+
+
+.geral{
+
+    border-width: 25px;
+    border-color: silver;
+    border-style: solid;
+    background-color: violet;
+
+}
+
+.header{
+
+    border-width: 1px;
+    border-color: black;
+    border-style: dotted;
+    background-color: skyblue;
+    padding: 10px;
+}
+
+.content{
+   /* border: 5px dotted 10px black; */
+    border-width: 1px;
+    border-color: black;
+    border-style: dotted;
+    padding: 10px;
+    background-color: royalblue;
+}
+
+.classe{
+
+    font-size: 5px;
+    text-align: center;
+}
