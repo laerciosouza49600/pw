@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title> formulario</title>
+    </head>
+
+<body>
+
+<script>
+    
+    function formulario(){
+
+        var
+
+        a = document.form1.nome.value;
+        b = document.form1.sobrenome.value;
+
+        document.write("Nome e sobrenome <b>" + a + b);
+
+    }
+    
+    
+    </script>
+
+</hr>
+
+
+<form name = "form1" method="POST">
+
+    nome: <input type = "text" name = "nome">
+
+    sobrenome: <input type = "text" name = "sobrenome">
+
+    <button type = "submit" onclick = "formulario()" > Enviar</button>
+
+</form>
+
+
+</body>
+</html>
