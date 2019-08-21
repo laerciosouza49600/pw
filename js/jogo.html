@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title> Jogo da sorte</title>
+    </head>
+
+<body>
+
+    <h1> Jogo do acerto</h1>
+
+    <script>
+
+        function sorteio(){
+
+            numero = document.formulario.numero.value;
+            
+            numero = parseInt(numero);
+
+            var
+
+            x = Boolean;
+
+            vetor =[];
+
+            for(i = 0; i < 10; i++){
+
+                vetor[i] = Math.floor(Math.random() * 20);
+
+            }
+
+            for(i = 0; i < 10; i++){
+
+              document.write(vetor[i] + "</br>");
+
+                if(numero == vetor[i]){
+
+
+                    document.write("<font face = 'arial' size = '5' color = 'blue' > Você Ganhou </font> ");
+
+                    break;
+
+
+                }
+                
+            }
+        }
+
+    
+    </script>
+
+    <form name = "formulario" method = "POST">
+
+        numero: <input type = "text" name = "numero">
+
+        <button type = "submit" onclick = "sorteio()"> verificar </button>
+
+
+    </form>
+
+
+</body>
+</html>
