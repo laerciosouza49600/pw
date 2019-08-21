@@ -9,7 +9,7 @@
 
     <script> 
 
-    function formulario(){
+   /* function formulario(){
 
     a = prompt("diga um numero");
     b = prompt("diga outro numero:");
@@ -22,7 +22,15 @@
 
     }
 
+    */
+
     function soma(a,b){
+
+        a = form1.n.value;
+        b = form1.n2.value;
+
+        a = parseFloat(a);
+        b = parseFloat(b);
 
         alert("a soma é igual a " + (a+b));
 
@@ -30,16 +38,38 @@
 
     function sub(a,b){
 
+        a = parseFloat(a);
+        b = parseFloat(b);
+
+        a = form1.c.value;
+        b = form1.d.value;
+
+
         alert("a subtração é igual a " + (a-b));
+        
+       
 
     }
 
     function multi(a,b){
 
+        a = form1.e.value;
+        b = form1.f.value;
+
+        a = parseFloat(a);
+        b = parseFloat(b);
+
         alert("a multiplicação é igual a " + (a*b));
+
     }
 
     function div(a,b){
+
+        a = form1.g.value;
+        b = form1.h.value;
+
+        a = parseFloat(a);
+        b = parseFloat(b);
 
         alert("a divisão é igual a " + (a/b));
     }
@@ -49,7 +79,33 @@
 
 <form name="form1" method="POST">
 
-     soma: <input type = "text" name = soma;
+     a: <input type = "text" name = "n">
+     b:<input type = "text" name = "n2">
+
+     <button type = "submit" onclick="soma()"> soma</button>
+
+    </br>
+
+    c: <input type = "text" name = "c">
+    d: <input type = "text" name = "d">
+
+
+     <button type = "submit" onclick = "sub()"> subtracao</button>
+
+    </br>
+
+
+     e: <input type = "text" name = "e">
+     f: <input type = "text" name = "f">
+
+     <button type = "submit" onclick = "multi()" > multiplicacao</button>
+
+    </br>
+
+     g: <input type = "text" name = "g">
+     h: <input type = "text" name = "h">
+
+     <button type = "submit" onclick = "div()" > divisao</button>
 
 </form>
 
