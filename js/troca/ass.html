@@ -1,0 +1,44 @@
+<html>
+
+<head>
+
+	<link rel = "stylesheet" type = "text/css" href = "atividade.css"/>
+
+	
+	<title> oi </title>
+
+
+</head>
+
+<body>
+
+	<script type="text/javascript">
+		
+		function texto(){
+
+			document.getElementById('texto').innerHTML = 
+
+			"<font color = 'blue' > Texto em azul </font>";
+
+		}
+
+		function imagem(){
+
+			document.getElementById('img').src = "download.png";
+		}
+
+
+	</script>
+
+	<div id = "texto">
+
+		<font color = "red" onclick = "texto()"> Texto em vermelho </font>
+
+	</div>
+
+		<img id = 'img' onclick = "imagem()" src = "seta.jpg">;
+
+	</body>
+
+</html>
+
