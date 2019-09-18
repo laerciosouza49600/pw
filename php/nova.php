@@ -1,6 +1,6 @@
 <?php
 
-$mensal = $_POST['mensal'];
+$mensal = $_POST['mensal']; 
 $bimestral = $_POST['bimestral'];
 
 $media = ($mensal + $bimestral) / 2;
