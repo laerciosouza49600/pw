@@ -23,8 +23,5 @@
 
   echo date('d/m/y',strtotime('+3days'));
 
-  
-
-
 
 ?>
