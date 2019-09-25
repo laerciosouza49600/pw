@@ -63,7 +63,11 @@ $valor = Array("R$ 12,60", "R$ 10,00", "R$ 09,40", "R$ 11,20" , "R$ 08,50", "R$ 
 
     </tr>
 
-    <tr>
+    <tr bgcolor = "
+    <?php
+    echo $cor[2];
+    ?>
+    ">
 
     <td> 2  </td>
     <td> terça </td>
@@ -72,7 +76,11 @@ $valor = Array("R$ 12,60", "R$ 10,00", "R$ 09,40", "R$ 11,20" , "R$ 08,50", "R$ 
 
     </tr>
 
-    <tr>
+    <tr bgcolor = "
+    <?php
+    echo $cor[3];
+    ?>
+    ">
 
     <td> 3 </td>
     <td> quarta </td>
@@ -81,7 +89,11 @@ $valor = Array("R$ 12,60", "R$ 10,00", "R$ 09,40", "R$ 11,20" , "R$ 08,50", "R$ 
 
     </tr>
 
-    <tr>
+    <tr bgcolor = "
+    <?php
+    echo $cor[4];
+    ?>
+    ">
 
     <td> 4 </td>
     <td> quinta </td>
@@ -90,12 +102,16 @@ $valor = Array("R$ 12,60", "R$ 10,00", "R$ 09,40", "R$ 11,20" , "R$ 08,50", "R$ 
 
     </tr>
 
+    <tr>
+
     <td> 5 </td>
     <td> sexta </td>
     <td> Bacalhau ao forno </td>
     <td> R$ 15,20 </td>
     
     </tr>
+
+    <tr>
 
     <td> 6 </td>
     <td> sabádo </td>
