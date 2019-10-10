@@ -6,7 +6,7 @@
 //write escrever
 //fopen cria o arquivo
 
-$file = fopen("arquivo.txt", 'a');
+$file = fopen("arquivo.txt", 'w');
 $file1 = fopen("arquivo.txt", 'r');
 
 // fwrite($file, "ifpi 2019 <br/> \n");
