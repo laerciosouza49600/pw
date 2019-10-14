@@ -10,7 +10,7 @@ $file = fopen("arquivo.txt", 'w');
 $file1 = fopen("arquivo.txt", 'r');
 
 // fwrite($file, "ifpi 2019 <br/> \n");
-fwrite($file, "nome | email | ano | \n");
+// fwrite($file, "nome | email | ano | \n");
 
 $texto = fread($file1,4096);
 $dados = explode('|', $texto);
@@ -34,9 +34,19 @@ echo "<table border = '1'align = 'center'>";
 //filesise($file1)
 
 ?>
-
+<fieldset align = "center">
 <form name = form1 method = "POST" action = "arquivo.php">
 
 	Nome: <input type = "text" name = "nome"> </br>
 	Telefone: <input type = "text" name = "telefone"> </br>
-	Email: <input type="text" name="email"> </br>
+	Email: <input type="text" name="email"> </br> 
+</form>
+</fieldset>
+
+<?php
+
+    $nome = $_POST['nome'];
+    $telefone = $_POST['telefone'];
+    $email = $_POST['email'];
+
+    fwrite($file $nome "|" $telefone "|" $email "|" "\n");
