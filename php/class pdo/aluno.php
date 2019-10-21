@@ -5,7 +5,6 @@
 		public $nome;
 		public $matricula;
 
-
 		function Aluno($nome, $matricula){
 
 			$this->nome = $nome;

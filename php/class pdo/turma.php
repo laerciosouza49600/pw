@@ -13,22 +13,45 @@
 			$this->sala = "L2";
 		}
 
+		function getCodigo(){
+
+			return $this->codigo;
+		}
+
 		function incluirAluno($aluno){
 
-			echo ("aluno incluido");
+			echo("Aluno incluido");
 
+		}
 
+		function estaAberta($cod){
+
+			if($cod == $this->codigo){
+
+				echo ("Turma aberta");
+
+			}else{
+
+				echo ("Turma fechada");
+			}
 		}
 
 		
 	}
-		
 
 		$aluno = new Aluno("LAERCIO", "201611");
 
 		$incluir = new Turma();
 
 		$incluir->incluirAluno($aluno);
+
+		echo ("</br>");
+
+		$codigo ="5522";
+
+		$incluir->estaAberta($codigo);
+
+
 
 
 
