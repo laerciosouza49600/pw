@@ -1,0 +1,38 @@
+-- --------------------------------------------------------
+-- Servidor:                     127.0.0.1
+-- Versão do servidor:           10.3.16-MariaDB - mariadb.org binary distribution
+-- OS do Servidor:               Win64
+-- HeidiSQL Versão:              10.2.0.5599
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+-- Copiando dados para a tabela siscarteira.carteira: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `carteira` DISABLE KEYS */;
+/*!40000 ALTER TABLE `carteira` ENABLE KEYS */;
+
+-- Copiando dados para a tabela siscarteira.cliente: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
+INSERT INTO `cliente` (`id_cliente`, `nome`, `cpf`) VALUES
+	(1, 'laercio', '050.320.456'),
+	(2, 'karlisson', '030.320.456'),
+	(3, 'rafael', '030.231.456');
+/*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
+
+-- Copiando dados para a tabela siscarteira.endereco: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `endereco` DISABLE KEYS */;
+INSERT INTO `endereco` (`id_endereco`, `bairro`, `numero`, `fone`, `email`, `id_cliente`) VALUES
+	(1, 'Piaui', '09', '86-994563718', 'laercio-phb@hotmail.com', 1),
+	(2, 'Pindorama', '04', '86-81154617', 'karlisson-phb@hotmail.com', 2),
+	(3, 'Santa Luzia ', '05', '86-94784620', 'rafael-phb@hotmail.com', 3),
+	(4, 'Nova Parnaiba ', '24', '86-994784620', 'rafael-phb@hotmail.com', 2),
+	(5, 'Tabuleiro ', '12', '86-997675214', 'laercio-phb@hotmail.com', 1);
+/*!40000 ALTER TABLE `endereco` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
