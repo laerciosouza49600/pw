@@ -13,7 +13,15 @@
 	$cliente = new Cliente_Control();
 	$dados = $cliente->View();
 	if(@$_GET['btn'] == 'btn1'){
-		$cliente->Cadastrar();
+		$nome = $_GET['nome'];
+		$cpf = $_GET['cpf'];
+		$cliente->Add($nome,$cpf);
+	}
+
+	if($_GET['acao'] == "del"){
+
+		$id = $_GET['id'];
+		$cliente->Deletar($id);
 	}
 
 	if(@$_GET['btn'] == 'btn2'){
@@ -37,6 +45,7 @@
 	echo "</table>";
 ?>
 	<form method = "GET">
+
 		Nome: <input type = "text" name = "nome">
 		CPF: <input type = "number" name = "cpf" size = '10'>
 		<button class = 'btn btn-info 'name = "btn" value = "btn1"> Cadastrar </button>

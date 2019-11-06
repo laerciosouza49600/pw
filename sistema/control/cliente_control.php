@@ -35,9 +35,21 @@
 			$sql = "INSERT INTO cliente (nome,cpf) values (:nome, :cpf)";
 			$d = $this->conn->Conect();
 			$dados = $d->prepare($sql);
-			$dados->bindValue(":nome", $nome);
-			$dados->bindValue(":cpf", $cpf);
+			$dados->bindValue(":nome", $this->dados->getNome());
+			$dados->bindValue(":cpf", $cpf $this->dados->getCpf());
 			$dados->execute();
+			header("Location: ../view/cliente_view.php");
+		}
+
+		function Deletar($id){
+
+			$sql = "DELETE * FROM cliente where id = :id";
+
+			$d = $this->conn->Conect();
+			$dados = $d->prepare($sql);
+			$dados->bindValue()
+			header("Location: ../view/cliente_view.php"); #atualiza assim que apaga;
+
 		}
 	}
 ?>
