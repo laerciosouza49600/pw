@@ -15,7 +15,17 @@ if(@$_GET['btn']== 'btn1'){
   $cpf = $_GET['cpf'];
   $cliente->Add($nome, $cpf);
 }
-if($_GET['acao'] == "del"){
+if(@$_GET['acao']== "edit"){
+  $id = $_GET['id'];
+  $dadosV = $cliente->view_id($id);
+  foreach ($dadosV as $d) {
+    # code...
+    $cpf1 = $d['cpf'];
+    $nome1 = $d['nome'];
+  
+  }
+}
+if(@$_GET['acao'] == "del"){
   $id = $_GET['id'];
   $cliente->Deletar($id);
 }
@@ -28,8 +38,8 @@ echo "<tr>";
 foreach($dados as $d){
     echo "<td>".$d['nome']."</td>";
     echo "<td>".$d['cpf']."</td>";
-    echo "<td> <a href=?acao=edit&id=".$d['id']."> Editar </a></td>";
-    echo "<td> <a href=?acao=del&id=".$d['id']."> Deletar </a></td></td>";
+    echo "<td> <a href=?acao=edit&id=".$d['id_cliente']."> Editar </a></td>";
+    echo "<td> <a href=?acao=del&id=".$d['id_cliente']."> Deletar </a></td></td>";
     echo "</tr>";
 }
 echo "</table>";
@@ -39,8 +49,8 @@ echo "</table>";
       <legend>Cadastro</legend>
     <form method="GET"> 
        
-       Nome: <input type="text" name="nome">
-       CPF: <input type="text" size='10' name="cpf">
+       Nome: <input type="text" name="nome" value= <?php echo @$nome1; ?>>
+       CPF: <input type="text" size='10' name="cpf" value = <?php echo @$cpf1; ?>>
        <button class='btn btn-info' name="btn" value="btn1"> Cadastrar </button>
        <button class='btn btn-success' name="btn" value="btn2"> Atualizar </button>
     </form> 

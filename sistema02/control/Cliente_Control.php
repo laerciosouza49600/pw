@@ -16,6 +16,17 @@
       $dados->execute();
       return $dados;
     }
+
+    function view_id($id){
+
+       $sql = "SELECT * FROM Cliente where id = :id";
+       $d = $this->conn->Conect();
+       $dados=$d->prepare($sql);
+       $dados->bindValue(":id", $id);
+       $dados->execute();
+       return $dados;
+
+    }
     function Add($nome, $cpf){  
       $this->dados->setNome($nome);
       $this->dados->setCpf($cpf);
@@ -28,7 +39,7 @@
       header("Location: ../view/Cliente_View.php");
     }
     function Deletar($id){
-      $sql = "DELETE FROM Cliente WHERE id = :id";
+      $sql = "DELETE FROM Cliente WHERE id_cliente = :id";
       $d = $this->conn->Conect();
       $dados = $d->prepare($sql);
       $dados->bindValue(":id", $id);
